@@ -8,8 +8,8 @@
   --text-color: white;
   --bg-url: url(./assets/assets/bg-mobile.jpg);
   --strock-color: rgba(255, 255, 255, 0.5);
-  --backgroud-buttons: rgba(255, 255, 255, 0.1);
-  --backgroud-buttons-hover: rgba(255, 255, 255, 0.1);
+  --backgroud-buttons: rgba(255, 255, 255, 0.5);
+  --backgroud-buttons-hover: rgba(255, 255, 255, 0.5);
   --backgroud-social-liks-hover: rgba(255, 255, 255, 0.2);
   --icon-button: url(./assets/assets/moon-stars.svg);
 }
@@ -17,9 +17,9 @@
 .light {
   --text-color: black;
   --bg-url: url(./assets/assets/bg-mobile-light.jpg);
-  --strock-color: rgba(0, 0, 0, 0.5);
-  --backgroud-buttons: rgba(0, 0, 0, 0.05);
-  --backgroud-buttons-hover: rgba(0, 0, 0, 0.02);
+  --strock-color: rgba(0, 0, 0, 1);
+  --backgroud-buttons: rgba(255, 255, 255, 0.4);
+  --backgroud-buttons-hover: rgba(255, 255, 255, 1);
   --backgroud-social-liks-hover: rgba(0, 0, 0, 0.1);
   --icon-button: url(./assets/assets/sun.svg);
 }
@@ -31,7 +31,8 @@ body {
   background-size: cover;*/
 
   /* background: color image repeat position/size */
-  background: var(--bg-url) no-repeat top center/cover;
+  /* background: var(--bg-url) no-repeat top center/cover; */
+  background: linear-gradient(162deg, rgba(242,234,228,1) 13%, rgba(145,94,76,1) 62%, rgba(69,45,36,1) 99%);
   height: 100vh;
 }
 
@@ -98,7 +99,7 @@ body * {
   display: block;
   width: 64px;
   height: 24px;
-  border: 1px solid var(--strock-color);
+  /* border: 1px solid var(--strock-color); */
   background: var(--backgroud-buttons);
   backdrop-filter: blur(4px);
   border-radius: 9999px;
@@ -121,7 +122,7 @@ ul li a {
   padding: 16px 24px;
 
   border-radius: 8px;
-  border: 1px solid var(--strock-color);
+  /* border: 1px solid var(--strock-color); */
   background: var(--backgroud-buttons);
   backdrop-filter: blur(4px);
 
@@ -138,7 +139,7 @@ ul li a {
 
 /* pseudo-selector */
 ul li a:hover {
-  border: 2px solid var(--text-color);
+  /* border: 2px solid var(--text-color); */
   background: var(--backgroud-buttons-hover);
 }
 
@@ -168,6 +169,10 @@ footer {
   font-size: 16px;
   padding: 24px 0;
   text-align: center;
+  
+  > p {
+    color: var(--backgroud-buttons);
+  }
 }
 
 @media (min-width: 700px) {
